@@ -8,6 +8,8 @@ def configure(env):
 		env.android_add_gradle_classpath("io.fabric.tools:gradle:1.+")
 		env.android_add_gradle_plugin("io.fabric")
 		env.android_add_dependency("compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') { transitive = true; }")
+		#env.android_add_dependency("compile('com.crashlytics.sdk.android:crashlytics-ndk:2.0.1:debug@aar')")
+		env.android_add_dependency("compile('com.crashlytics.sdk.android:crashlytics-ndk:2.0.+@aar')")
 		env.android_add_to_manifest("android/AndroidManifestChunk.xml")
 		env.android_add_to_permissions("android/AndroidManifestPermissionsChunk.xml")
 		env.android_add_java_dir("android/src/")
